@@ -1,0 +1,11 @@
+require_relative '../config/environment.rb'
+
+p Movie.first
+#=> #<Movie id: 1, title: "Wargames", release_date: 1983, director: "John Badham", lead: "Matthew Broderick", in_theaters: false>
+
+# title_movie = Movie.create_with_title("This is a title")
+
+p Movie.find_movies_after_2002
+# #<ActiveRecord::Relation [#<Movie id: 3, title: "Nebraska", release_date: 2013, director: "Alexander Payne", lead: "Bruce Dern", in_theaters: true>, 
+    #<Movie id: 4, title: "Muppets Most Wanted", release_date: 2014, director: "James Bobin", lead: "Tom Hiddleston", in_theaters: true>, 
+    #<Movie id: 5, title: "Zero Dark Thirty", release_date: 2012, director: "Kathryn Bigelow", lead: "Jessica Chastain", in_theaters: false>]>
